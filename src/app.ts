@@ -23,13 +23,17 @@ var sample = `#TITLE <test>
   },
   template: `
     <div>
-      <h1>Memo</h1>
-      <p v-if="user">hello, {{user.displayName}}.</p>
-      <button v-if="!user" @click="login">login</button>
-      <div id="code" style="height:300px; width: 500px"></div>
+      <h1>scoredraft</h1>
+      <div class="header">
+        <button v-if="!user" @click="login">login</button>
+        <button v-if="user" @click="logout">logout</button>
+        <span v-if="user">{{user.displayName}}</span>
+      </div>
+
+      <div id="code" style="height:300px; width: 100%"></div>
       <button @click="send(message)">Post</button>
       <button @click="play(message)">Play</button>
-      <div v-for="item in itemsRev" track-by="$index">{{item}}</div>
+      <div v-for="item in itemsRev" class="item" track-by="$index">{{item}}</div>
     </div>
   `
 })
@@ -83,6 +87,9 @@ export class App extends Vue {
   login() {
     this.junk.login();
   }
+  logout() {
+    this.junk.logout();
+  }  
 
   send(message: string) {
     this.junk.post(
