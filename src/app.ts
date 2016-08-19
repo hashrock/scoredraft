@@ -17,7 +17,6 @@ var sample = `#TITLE <test>
 #END
 `
 
-
 @Component({
   props: {
   },
@@ -33,7 +32,8 @@ var sample = `#TITLE <test>
       <div id="code" style="height:300px; width: 100%"></div>
       <button @click="send(message)">Post</button>
       <button @click="play(message)">Play</button>
-      <div v-for="item in itemsRev" class="item" track-by="$index">{{item}}</div>
+      <button @click="stop()">Stop</button>
+      <div v-for="item in itemsRev" class="item" track-by="$index" @click="play(item)">{{item}}</div>
     </div>
   `
 })
@@ -98,7 +98,7 @@ export class App extends Vue {
     this.ins.getDoc().setValue("");
   }
 
-  play() {
+  play(message: string) {
     this.looper.setChannel(this.filter);
     var master8 = new MasterChannel();
     master8.setVolume(1);
@@ -107,7 +107,7 @@ export class App extends Vue {
     if (this.looper && !this.looper.isActive())
       this.looper.activate();
     var tsc = new TssCompiler();
-    player8.play(tsc.compile(this.message));
+    player8.play(tsc.compile(message));
     this.filter.setChannel(master8);
   }
   stop() {
