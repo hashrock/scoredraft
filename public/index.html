@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>scoredraft-ts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/addon/hint/show-hint.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/addon/hint/show-hint.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/mode/javascript/javascript.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/addon/selection/active-line.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/addon/edit/matchbrackets.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/theme/monokai.min.css">  
+    <script language="JavaScript" src="http://yuri.twintail.org/lib/flotr2.min.js"></script>
+    <script language="JavaScript" src="./libs/tss/Log.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/Format.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/TString.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/AudioLooper.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/BiquadFilterChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/MasterChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/SimpleSlaveChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/PsgDeviceChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/SccDeviceChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/TssChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/TssCompiler.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/TsdPlayer.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/MidiChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/SimpleMidiChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/WebMidiLinkMidiChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/WebMidiChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/SmfPlayer.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/SoundFont2.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/FmChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/OpnDeviceChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/S98Player.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/OtisDeviceChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/OtisMidiChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/FrequencyConversionChannel.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/F3SampleFormat.js"></script>
+    <script language="JavaScript" src="./libs/tss/tss/ModulePlayer.js"></script>  
+</head>
+<body>
+  <main>
+    <app></app>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAGEVoquRJNKPb-LJgi0YGQjahnaj7sMMw",
+      authDomain: "scoredraft.firebaseapp.com",
+      databaseURL: "https://scoredraft.firebaseio.com",
+      storageBucket: "scoredraft.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>  
+	<script src="./bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "./public/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "./src/main.ts",
+        "./src/test.ts"
+    ],
+    "exclude": [
+        "public",
+        "node_modules"
+    ]    
+}
