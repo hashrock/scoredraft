@@ -29,11 +29,13 @@ var sample = `#TITLE <test>
         <span v-if="user">{{user.displayName}}</span>
       </div>
 
-      <div id="code" style="height:300px; width: 100%"></div>
-      <button @click="send(message)">Post</button>
-      <button @click="play(message)">Play</button>
-      <button @click="stop()">Stop</button>
-      <div v-for="item in itemsRev" class="item" track-by="$index" @click="play(item)">{{item}}</div>
+      <div v-show="user">
+        <div id="code" style="height:300px; width: 100%"></div>
+        <button @click="send(message)">Post</button>
+        <button @click="play(message)">Play</button>
+        <button @click="stop()">Stop</button>
+        <div v-for="item in itemsRev" class="item" track-by="$index" @click="play(item)">{{item}}</div>
+      </div>
     </div>
   `
 })
